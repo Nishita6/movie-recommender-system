@@ -1,0 +1,14 @@
+name: Wake Up Streamlit App
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # Runs every 12 hours
+  workflow_dispatch: # Allows you to run it manually
+
+jobs:
+  wake-up:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open App URL
+        run: |
+          curl -s "https://movie-recommender-system6.streamlit.app/" > /dev/null
