@@ -16,7 +16,7 @@ The project is deployed as an interactive web application using **Streamlit**.
 
 <hr />
 
-## 🔗 **Live Application:
+## 🔗 Live Application:
 https://movie-recommender-system6.streamlit.app/
 
 ## 📁 Repository Structure
