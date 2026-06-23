@@ -9,6 +9,12 @@ jobs:
   wake-up:
     runs-on: ubuntu-latest
     steps:
-      - name: Open App URL
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create empty commit to wake Streamlit
         run: |
-          curl -s "https://movie-recommender-system6.streamlit.app/" > /dev/null
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit --allow-empty -m "cron: wake up streamlit app"
+          git push
